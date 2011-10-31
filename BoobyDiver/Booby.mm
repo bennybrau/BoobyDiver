@@ -23,26 +23,28 @@
 {
     CGSize winSize = [CCDirector sharedDirector].winSize;
     b2Vec2 curPosition = _body->GetPosition();
-    float maxHeight = ((winSize.height+30)/PTM_RATIO);
+    float maxHeight = ((winSize.height+120)/PTM_RATIO);
     
     if (curPosition.y < maxHeight)
     {
-        //float diffY = (maxHeight - curPosition.y);
+        float diffY = (maxHeight - curPosition.y);
         
-        /*
         if (diffY <= 5)
         {
             _body->ApplyForce(b2Vec2(1, 0), _body->GetPosition());
+            //_body->SetLinearVelocity(b2Vec2(1,1));
         }
         
         else
-        {*/
+        {
+            //_body->SetLinearVelocity(b2Vec2(1,1));
             _body->ApplyForce(b2Vec2(1, 2), _body->GetPosition());
-        //}
+        }
     }
     else
     {
-        _body->SetLinearVelocity(b2Vec2(1,0));
+        //_body->SetLinearVelocity(b2Vec2(1,0));
+        _body->ApplyForce(b2Vec2(1, 0), _body->GetPosition());
     }
 }
 
@@ -75,7 +77,7 @@
     CGSize size = [[CCDirector sharedDirector] winSize];
     int screenH = size.height;
     
-    CGPoint startPosition = ccp(0, (screenH/2)+radius);
+    CGPoint startPosition = ccp(0, screenH +120+radius);
     
     b2BodyDef bd;
     bd.type = b2_dynamicBody;

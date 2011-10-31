@@ -114,6 +114,7 @@
     _world = new b2World(gravity, doSleep);
 }
 
+/*
 -(void) createTestBodyAtPosition:(CGPoint)position
 {
     b2BodyDef testBodyDef;
@@ -131,6 +132,7 @@
     testBody->CreateFixture(&testFixtureDef);
     
 }
+*/
 
 -(id) init {
     if((self=[super init])) {
@@ -145,7 +147,7 @@
         
         _booby = [[[Booby alloc] initWithWorld:_world] autorelease];
         [_ocean.batchNode addChild:_booby];
-        
+        [_booby wake];
     }
     return self;
 }
