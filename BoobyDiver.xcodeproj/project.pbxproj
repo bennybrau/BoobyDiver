@@ -1067,7 +1067,7 @@
 		0B62E46F143EAD4C0006DA37 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Rovi Corporation";
 			};
 			buildConfigurationList = 0B62E472143EAD4C0006DA37 /* Build configuration list for PBXProject "BoobyDiver" */;

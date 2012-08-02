@@ -38,7 +38,7 @@
         else
         {
             //_body->SetLinearVelocity(b2Vec2(1,1));
-            _body->ApplyForce(b2Vec2(1, 2), _body->GetPosition());
+            _body->ApplyForce(b2Vec2(1, 4), _body->GetPosition());
         }
     }
     else
